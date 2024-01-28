@@ -1,0 +1,33 @@
+# -*- mode: snippet -*-
+# name: context
+# key: context
+# uuid: context
+# group: dunder methods
+# --
+def __enter__(self):
+    """
+    $1
+    :return: the object itself (which will be used in the context)
+    """
+    print("Entering context ...")
+    return self.$2
+
+def __exit__(self, exc_type, exc_val, exc_tb):
+    """
+    $3
+    :param exc_type: Exception type
+    :param exc_val:  Exception value
+    :param exc_tb:   Exception traceback
+    :return: True if exception was caught else False
+    """
+    print("Exiting context ...")
+    self.$4.close()
+
+    if KeyboardInterrupt == exc_type:
+        print(f"[WARNING] Caught KeyboardInterrupt: {exc_val}")
+        return True
+
+    if Exception == exc_type:
+        print(f"[ERROR] Caught Exception: {exc_val}")
+        return False
+
