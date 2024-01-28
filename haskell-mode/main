@@ -3,4 +3,6 @@
 # key: main
 # uuid: main
 # --
-main = do $0
+main :: IO ()
+main = do
+    $0

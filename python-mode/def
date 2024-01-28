@@ -4,5 +4,5 @@
 # uuid: def
 # group: definitions
 # --
-def ${1:func_name}($2):
-    ${3:`(or % "pass")`}
+def ${1:func_name}($2) -> $3:
+    ${4:`(or % "pass")`}

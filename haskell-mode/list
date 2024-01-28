@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: list
+# key: list
+# uuid: list
+# --
+\[${2:`(or % "func")`} x | x <- ${1:`(or % "xs")`}, ${3:`(or % "predicate")`} x \] $0
+
