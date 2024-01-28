@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: rec
+# key: rec
+# uuid: rec
+# note: add {-# OPTIONS_GHC -Wno-partial-fields #-}
+# --
+{ get_${1:func_name} :: ${2:type} }
+| $0
+deriving (Show, Eq)

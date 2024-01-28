@@ -4,5 +4,5 @@
 # uuid: defm
 # group: object oriented
 # --
-def ${1:method_name}(self${2:, $3}):
-    ${4:`(or % "pass")`}
+def ${1:method_name}(self${2:, $3}) -> $4:
+    ${5:`(or % "pass")`}
